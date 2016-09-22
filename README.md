@@ -1,2 +1,5 @@
 # Ran.js
-Render elements in canvas.
+
+Realize architectures in native objects.
+
+Build FE codes from JS objects.
