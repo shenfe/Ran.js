@@ -1,10 +1,10 @@
 /**
  * Header Component
  * @param  {[function]} tabbar [Tabbar Component]
- * @param  {[object]} source [Data]
+ * @param  {[object]} data [Data]
  * @return {[object]} [Component Instance]
  */
-function header (tabbar, source) {
+function header (tabbar, data) {
     var r = {
         // type: 'div', // default: 'div'
         load: function () {
@@ -33,6 +33,7 @@ function header (tabbar, source) {
         //         r.state.display(1);
         //     }
         // }, // 其他组件实例对本组件的操作
+        event: {},
         helper: {}
     };
     return r.load();
