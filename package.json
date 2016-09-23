@@ -1,0 +1,29 @@
+{
+  "name": "ran.js",
+  "version": "0.1.0",
+  "description": "render all natively!\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[R",
+  "main": "app.js",
+  "dependencies": {
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenfe/Ran.js"
+  },
+  "keywords": [
+    "OO\u001b[D\u001b[Drender",
+    "OO"
+  ],
+  "author": "hengwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shenfe/Ran.js/issues"
+  },
+  "homepage": "https://github.com/shenfe/Ran.js"
+}
