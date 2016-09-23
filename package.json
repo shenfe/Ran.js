@@ -1,7 +1,7 @@
 {
   "name": "ran.js",
   "version": "0.1.0",
-  "description": "render all natively!\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[R",
+  "description": "Render all natively!",
   "main": "app.js",
   "dependencies": {
     "webpack": "^1.13.2"
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shenfe/Ran.js"
+    "url": "git+https://github.com/shenfe/Ran.js.git"
   },
   "keywords": [
-    "OO\u001b[D\u001b[Drender",
+    "MV*",
     "OO"
   ],
   "author": "hengwu",
