@@ -1,13 +1,26 @@
+var path = require('path');
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
-    entry: {
-        app: './app.js'
-    },
+    entry: ['webpack/hot/dev-server', path.resolve(__dirname, './app.js')],
     output: {
-        path: 'dist',
-        filename: '[name].js'
+        path: path.resolve(__dirname, './dist'),
+        filename: 'app.bundle.js'
     },
-    plugins: [commonsPlugin]
+    module: {
+        loaders: [
+            {
+                test: /\.js?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel',
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.MinChunkSizePlugin(minSize)
+    ]
 };
