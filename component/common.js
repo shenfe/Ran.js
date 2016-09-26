@@ -11,6 +11,6 @@ function common (type) {
     };
 }
 
-var a = common('a');
-var span = common('span');
-var img = common('img');
+Ran.component.a = common('a');
+Ran.component.span = common('span');
+Ran.component.img = common('img');
