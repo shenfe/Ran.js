@@ -1,10 +1,11 @@
 <header r-data="$this"></header>
 <main>
 <page r-if="$curActiveTabName == 'tab1'">
-    This is page1.
+    <input type="text" r-value="user.desc">
+    <button>OK</button>
 </page>
 <page r-if="$curActiveTabName == 'tab2'">
-    This is page2.
+    {{getTab2Content}}
 </page>
 </main>
 <footer r-data="links"></footer>
