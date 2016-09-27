@@ -1,7 +1,5 @@
-<header>
-    <ul class="tabbar" r-data="tabNameList">
-        <li r-data-each="this">
-            {{$index}}. {{$value}}
-        </li>
-    </ul>
-</header>
+<ul class="tabbar" r-data="tabNameList">
+    <li r-data="$each tabNameList" r-class="$each.state" r-onclick="$curActiveTabName=$each.name;">
+        <tab r-data="$each" />
+    </li>
+</ul>
