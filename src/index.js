@@ -52,9 +52,9 @@ const nodify = {
         return ifEmpty(r);
     },
     children() {
-        if (this.nodeName === '#text') return null;
+        if (this.nodeName === '#text') return;
         const children = this.childNodes;
-        if (!children) return null;
+        if (!children) return;
         const r = [];
         let child;
         for (let i = 0, len = children.length; i < len; i++) {
@@ -98,7 +98,7 @@ const domify = [
      */
     function (node, dom) {
         if (node.style) {
-            if (Object.prototype.toString.call(node.style) === '[object String]') {
+            if (typeof node.style === 'string') {
                 dom.style.cssText = node.style;
                 return;
             }
