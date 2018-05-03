@@ -167,11 +167,11 @@ const grow = function (node) {
             break;
         default:
             dom = document.createElement(node.tag);
+            for (let i = 0, len = domify.length; i < len; i++) {
+                domify[i](node, dom);
+            }
     }
 
-    for (let i = 0, len = domify.length; i < len; i++) {
-        domify[i](node, dom);
-    }
     return dom;
 };
 
