@@ -68,16 +68,22 @@ const nodify = {
     }
 };
 
+const domFromHTML = html => {
+    let div = document.createElement('div');
+    div.innerHTML = html;
+    dom = div.children[0];
+    div.removeChild(dom);
+    div = null;
+    return dom;
+};
+
 const milk = function (dom, key) {
     if (typeof dom === 'string') {
-        let div = document.createElement('div');
-        div.innerHTML = dom;
-        dom = div.children[0];
-        div.removeChild(dom);
-        div = null;
+        dom = domFromHTML(dom);
     }
     const node = {};
     for (let i in nodify) {
+        if (!nodify.hasOwnProperty(i)) continue;
         const v = nodify[i].call(dom, key);
         if (v == null) continue;
         node[i] = v;

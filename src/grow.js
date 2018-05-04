@@ -8,6 +8,7 @@ const domify = [
     function ({ attr }, dom) {
         if (!attr) return;
         for (let i in attr) {
+            if (!attr.hasOwnProperty(i)) continue;
             dom.setAttribute(i, attr[i]);
         }
     },
@@ -17,8 +18,7 @@ const domify = [
      */
     function (node, dom) {
         if (node.class) {
-            if (node.class instanceof Array) dom.className = node.class.join(' ');
-            else dom.className = node.class;
+            dom.className = (node.class instanceof Array) ? node.class.join(' ') : node.class;
         }
     },
 
@@ -32,6 +32,7 @@ const domify = [
                 return;
             }
             for (let i in style) {
+                if (!style.hasOwnProperty(i)) continue;
                 dom.style[i] = style[i];
             }
         }
@@ -56,7 +57,7 @@ const domify = [
 ];
 
 const grow = node => {
-    let dom = null;
+    let dom;
 
     switch (node.tag) {
         case '#text':
@@ -64,8 +65,8 @@ const grow = node => {
             break;
         default:
             dom = document.createElement(node.tag);
-            for (let i = 0, len = domify.length; i < len; i++) {
-                domify[i](node, dom);
+            for (let d of domify) {
+                d(node, dom);
             }
     }
 
