@@ -12,7 +12,8 @@
     "url": "git+https://github.com/shenfe/vdom.git"
   },
   "keywords": [
-    "vdom"
+    "vdom",
+    "virtual-DOM"
   ],
   "author": "hengwu",
   "license": "MIT",
